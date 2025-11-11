@@ -1,78 +1,78 @@
 name: alz_custom
 management_groups:
-  - id: alz
+  - id: tfacc
     display_name: Azure Landing Zones
     archetypes:
       - root_custom
     exists: false
     parent_id: null
 
-  - id: platform
+  - id: platform-tfacc
     display_name: Platform
     archetypes:
       - platform_custom
     exists: false
-    parent_id: alz
+    parent_id: tfacc
 
-  - id: landingzones
+  - id: landingzones-tfacc
     display_name: Landing Zones
     archetypes:
       - landing_zones_custom
     exists: false
-    parent_id: alz
+    parent_id: tfacc
 
-  - id: corp
+  - id: corp-tfacc
     display_name: Corp
     archetypes:
       - corp_custom
     exists: false
-    parent_id: landingzones
+    parent_id: landingzones-tfacc
 
-  - id: online
+  - id: online-tfacc
     display_name: Online
     archetypes:
       - online_custom
     exists: false
-    parent_id: landingzones
+    parent_id: landingzones-tfacc
 
-  - id: sandbox
+  - id: sandbox-tfacc
     display_name: Sandbox
     archetypes:
       - sandbox_custom
     exists: false
-    parent_id: alz
+    parent_id: tfacc
 
-  - id: security
+  - id: security-tfacc
     display_name: Security
     archetypes:
       - security_custom
     exists: false
-    parent_id: platform
+    parent_id: platform-tfacc
 
-  - id: management
+  - id: management-tfacc
     display_name: Management
     archetypes:
       - management_custom
     exists: false
-    parent_id: platform
+    parent_id: platform-tfacc
 
-  - id: connectivity
+  - id: connectivity-tfacc
     display_name: Connectivity
     archetypes:
       - connectivity_custom
     exists: false
-    parent_id: platform
+    parent_id: platform-tfacc
 
-  - id: identity
+  - id: identity-tfacc
     display_name: Identity
     archetypes:
       - identity_custom
     exists: false
-    parent_id: platform
+    parent_id: platform-tfacc
 
-  - id: decommissioned
+  - id: decommissioned-tfacc
     display_name: Decommissioned
     archetypes:
       - decommissioned_custom
     exists: false
-    parent_id: alz
+    parent_id: tfacc
