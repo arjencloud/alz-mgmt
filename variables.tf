@@ -1,6 +1,6 @@
 variable "starter_locations" {
   type        = list(string)
-  description = "The default for Azure resources. (e.g 'uksouth')"
+  description = "The default for Azure resources. (e.g 'westeurope')"
   validation {
     condition     = length(var.starter_locations) > 0
     error_message = "You must provide at least one starter location region."
