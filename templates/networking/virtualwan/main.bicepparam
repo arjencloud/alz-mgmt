@@ -3,7 +3,6 @@ using './main.bicep'
 // General Parameters
 param parLocations = [
   'swedencentral'
-  ''
 ]
 param parTags = {}
 param parEnableTelemetry = true
