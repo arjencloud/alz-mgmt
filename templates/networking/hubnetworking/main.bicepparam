@@ -79,6 +79,10 @@ param hubNetworks = [
       vpnMode: 'activeActiveBgp'
       vpnType: 'RouteBased'
       asn: 65515
+      domainNameLabel: [
+        'vgw-alz-${parLocations[0]}-pip1-${uniqueString('rg-alz-conn', 'vnet-alz-${parLocations[0]}', parLocations[0], 'vpn')}'
+        'vgw-alz-${parLocations[0]}-pip2-${uniqueString('rg-alz-conn', 'vnet-alz-${parLocations[0]}', parLocations[0], 'vpn')}'
+      ]
     }
     expressRouteGatewaySettings: {
       deployExpressRouteGateway: true
