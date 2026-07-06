@@ -13,7 +13,14 @@ param landingZonesConfig = {
   managementGroupIntermediateRootName: 'alz'
   managementGroupDisplayName: 'Landing Zones'
   managementGroupDoNotEnforcePolicyAssignments: []
-  managementGroupExcludedPolicyAssignments: ['Enable-DDoS-VNET']
+  managementGroupExcludedPolicyAssignments: [
+    'Enable-DDoS-VNET'
+    'Deploy-VM-Monitoring'
+    'Deploy-VMSS-Monitoring'
+    'Deploy-VM-ChangeTrack'
+    'Deploy-VMSS-ChangeTrack'
+    'Deploy-MDFC-DefSQL-AMA'
+  ]
   customerRbacRoleDefs: []
   customerRbacRoleAssignments: []
   customerPolicyDefs: []
