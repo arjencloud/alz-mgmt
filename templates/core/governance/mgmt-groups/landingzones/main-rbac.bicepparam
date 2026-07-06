@@ -10,5 +10,7 @@ param parManagementGroupExcludedPolicyAssignments = [
   'Deploy-VM-ChangeTrack'
   'Deploy-VMSS-ChangeTrack'
   'Deploy-MDFC-DefSQL-AMA'
+  'Deploy-vmArc-ChangeTrack'
+  'Deploy-vmHybr-Monitoring'
 ]
 param parEnableTelemetry = true
