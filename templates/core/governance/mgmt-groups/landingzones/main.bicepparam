@@ -20,6 +20,8 @@ param landingZonesConfig = {
     'Deploy-VM-ChangeTrack'
     'Deploy-VMSS-ChangeTrack'
     'Deploy-MDFC-DefSQL-AMA'
+    'Deploy-vmArc-ChangeTrack'
+    'Deploy-vmHybr-Monitoring'
   ]
   customerRbacRoleDefs: []
   customerRbacRoleAssignments: []
@@ -41,73 +43,6 @@ param parPolicyAssignmentParameterOverrides = {
     parameters: {
       logAnalyticsWorkspaceId: {
         value: '/subscriptions/47d12adc-80ad-4582-a737-554a11d412af/resourceGroups/rg-alz-logging-${parLocations[0]}/providers/Microsoft.OperationalInsights/workspaces/law-alz-${parLocations[0]}'
-      }
-    }
-  }
-  'Deploy-vmArc-ChangeTrack': {
-    parameters: {
-      dcrResourceId: {
-        value: '/subscriptions/47d12adc-80ad-4582-a737-554a11d412af/resourceGroups/rg-alz-logging-${parLocations[0]}/providers/Microsoft.Insights/dataCollectionRules/dcr-ct-alz-${parLocations[0]}'
-      }
-    }
-  }
-  'Deploy-VM-ChangeTrack': {
-    parameters: {
-      dcrResourceId: {
-        value: '/subscriptions/47d12adc-80ad-4582-a737-554a11d412af/resourceGroups/rg-alz-logging-${parLocations[0]}/providers/Microsoft.Insights/dataCollectionRules/dcr-ct-alz-${parLocations[0]}'
-      }
-      userAssignedIdentityResourceId: {
-        value: '/subscriptions/47d12adc-80ad-4582-a737-554a11d412af/resourceGroups/rg-alz-logging-${parLocations[0]}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/mi-alz-${parLocations[0]}'
-      }
-    }
-  }
-  'Deploy-VMSS-ChangeTrack': {
-    parameters: {
-      dcrResourceId: {
-        value: '/subscriptions/47d12adc-80ad-4582-a737-554a11d412af/resourceGroups/rg-alz-logging-${parLocations[0]}/providers/Microsoft.Insights/dataCollectionRules/dcr-ct-alz-${parLocations[0]}'
-      }
-      userAssignedIdentityResourceId: {
-        value: '/subscriptions/47d12adc-80ad-4582-a737-554a11d412af/resourceGroups/rg-alz-logging-${parLocations[0]}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/mi-alz-${parLocations[0]}'
-      }
-    }
-  }
-  'Deploy-vmHybr-Monitoring': {
-    parameters: {
-      dcrResourceId: {
-        value: '/subscriptions/47d12adc-80ad-4582-a737-554a11d412af/resourceGroups/rg-alz-logging-${parLocations[0]}/providers/Microsoft.Insights/dataCollectionRules/dcr-vmi-alz-${parLocations[0]}'
-      }
-    }
-  }
-  'Deploy-VM-Monitoring': {
-    parameters: {
-      dcrResourceId: {
-        value: '/subscriptions/47d12adc-80ad-4582-a737-554a11d412af/resourceGroups/rg-alz-logging-${parLocations[0]}/providers/Microsoft.Insights/dataCollectionRules/dcr-vmi-alz-${parLocations[0]}'
-      }
-      userAssignedIdentityResourceId: {
-        value: '/subscriptions/47d12adc-80ad-4582-a737-554a11d412af/resourceGroups/rg-alz-logging-${parLocations[0]}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/mi-alz-${parLocations[0]}'
-      }
-    }
-  }
-  'Deploy-VMSS-Monitoring': {
-    parameters: {
-      dcrResourceId: {
-        value: '/subscriptions/47d12adc-80ad-4582-a737-554a11d412af/resourceGroups/rg-alz-logging-${parLocations[0]}/providers/Microsoft.Insights/dataCollectionRules/dcr-vmi-alz-${parLocations[0]}'
-      }
-      userAssignedIdentityResourceId: {
-        value: '/subscriptions/47d12adc-80ad-4582-a737-554a11d412af/resourceGroups/rg-alz-logging-${parLocations[0]}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/mi-alz-${parLocations[0]}'
-      }
-    }
-  }
-  'Deploy-MDFC-DefSQL-AMA': {
-    parameters: {
-      userWorkspaceResourceId: {
-        value: '/subscriptions/47d12adc-80ad-4582-a737-554a11d412af/resourceGroups/rg-alz-logging-${parLocations[0]}/providers/Microsoft.OperationalInsights/workspaces/law-alz-${parLocations[0]}'
-      }
-      dcrResourceId: {
-        value: '/subscriptions/47d12adc-80ad-4582-a737-554a11d412af/resourceGroups/rg-alz-logging-${parLocations[0]}/providers/Microsoft.Insights/dataCollectionRules/dcr-mdfcsql-alz-${parLocations[0]}'
-      }
-      userAssignedIdentityResourceId: {
-        value: '/subscriptions/47d12adc-80ad-4582-a737-554a11d412af/resourceGroups/rg-alz-logging-${parLocations[0]}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/mi-alz-${parLocations[0]}'
       }
     }
   }
